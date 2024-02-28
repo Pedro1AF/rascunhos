@@ -1,0 +1,28 @@
+
+/* Estilo básico para o cursor de digitação */
+@keyframes blink {
+    100% {
+      border-color: rgb(255, 0, 0);
+    }
+  }
+  .cursor {
+    border-right: 2px solid;
+    animation: blink 1s infinite;
+  }
+  
+  /* Estilo para o container */
+  #container {
+    position: relative;
+  }
+  
+  /* Estilo para o texto digitado */
+  #typed-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+
+  }
+  #final-image {
+    width: 100%;
+    height: auto;
+  }
+/* fIM DO CSS DE TEXTO ANIMADO */

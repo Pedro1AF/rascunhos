@@ -1,0 +1,19 @@
+.marquee{
+    overflow: hidden;
+    background: #000;
+    cursor: ew-resize;
+    white-space: nowrap;
+    padding: 10vh 0;
+
+}
+
+.title{
+    font-family: "Canopee" sans-serif ;
+    font-size: 12vw;
+    position: relative;
+    color: #646464;
+    display: inline-block;
+    margin: 0;
+    padding: 0 15%;
+    will-change: transform;
+}

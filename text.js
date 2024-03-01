@@ -1,21 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById('typed-text');
-    const text = textElement.textContent.trim(); // Obtém o texto do elemento p
-    textElement.textContent = ''; // Limpa o texto do elemento p
-    
-    let index = 0;
-    const speed = 100; // Velocidade de digitação em milissegundos
-  
-    function typeText() {
-      if (index < text.length) {
-        textElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeText, speed);
-      } else {
-        document.querySelector('.cursor').style.animation = 'blink 1s infinite'; // Faz o cursor piscar no final do texto
-        document.getElementById('final-image').style.display = 'block'; // Exibe a imagem após todo o texto ser digitado
-      }
-    }
-  
-    typeText();
-  });
+document.addEventListener("DOMContentLoaded"), function() 
+const texto = document.getElementById("typed-text").textContent.trim();
+document.getElementById("typed-text").textContent = "";
+
+let index = 0;
+function digitar() {
+  document.getElementById("container").textContent = texto.slice(0, index);
+  index++;
+  if (index > texto.length) {
+    clearInterval(interval);
+    document.getElementById("typed-text").style.display = "none";
+  }
+}
+
+const interval = setInterval(digitar, 100);
